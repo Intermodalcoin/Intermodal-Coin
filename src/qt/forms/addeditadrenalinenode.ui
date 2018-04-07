@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Add/Edit Intermodalcoin Node</string>
+   <string>Add/Edit IntermodalCoin Node</string>
   </property>
   <property name="modal">
    <bool>true</bool>

@@ -1,7 +1,7 @@
 // Copyright (c) 2010 Satoshi Nakamoto
 // Copyright (c) 2009-2012 The Bitcoin developers
 // Copyright (c) 2014-2015 Dash Developers
-// Copyright (c) 2017-2018 The Intermodalcoin developers
+// Copyright (c) 2017-2018 The IntermodalCoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -55,11 +55,10 @@ static void convertSeeds(std::vector<CAddress> &vSeedsOut, const unsigned int *d
 // Hardcoded seeds.
 static void getHardcodedSeeds(std::vector<CAddress> &vSeedsOut)
 {
-    std::vector<std::string> ips;
+  std::vector<std::string> ips;
     ips.push_back("82.196.13.81");
     ips.push_back("37.139.21.45");
     ips.push_back("46.101.56.208");
-
 
     const int64_t oneWeek = 7 * 24 * 60 * 60;
     for (size_t i = 0; i < ips.size(); ++i)
@@ -93,6 +92,7 @@ public:
         vout.resize(1);
         vout[0].SetEmpty();
 
+	// original 1516154401
         CTransaction txNew(1, 1514613432, vin, vout, 0);
 
         LogPrintf("genesis mainnet transaction:  %s\n", txNew.ToString().c_str());
@@ -108,15 +108,10 @@ public:
 
         hashGenesisBlock = genesis.GetHash();
 
-	    //LogPrintf("Display genesis hash so we can input it below %s\n", hashGenesisBlock.ToString().c_str());
-	    //LogPrintf("Display merkle root so we can input it below %s\n", genesis.hashMerkleRoot.ToString().c_str());
-        //LogPrintf("Display nonce so we can input it below %s\n", genesis.nNonce);
-        //LogPrintf("Display time so we can input it below %s\n", genesis.nTime);
-
         assert(hashGenesisBlock == uint256("70f78190c5d0e0d1e9958ad20b8983bda4f3a842fcb659ff1ad5416a91e3e279"));
         assert(genesis.hashMerkleRoot == uint256("431651c2231783ea262ad34ffab4841bc3912a739320d8832248edb810ffed54"));
 
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,63); // 
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,63); // S
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,21);
         base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,23);
         base58Prefixes[STEALTH_ADDRESS] = std::vector<unsigned char>(1,41);
@@ -158,7 +153,7 @@ static CMainParams mainParams;
 
 class CTestNetParams : public CMainParams {
 public:
-    CTestNetParams() {
+CTestNetParams() {
         // The message start string is designed to be unlikely to occur in normal data.
         // The characters are rarely used upper ASCII, not valid as UTF-8, and produce
         // a large 4-byte int at any alignment.
@@ -196,6 +191,7 @@ public:
     }
     virtual Network NetworkID() const { return CChainParams::TESTNET; }
 };
+
 static CTestNetParams testNetParams;
 
 

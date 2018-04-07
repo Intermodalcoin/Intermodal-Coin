@@ -143,7 +143,7 @@ void OptionsDialog::setMapper()
 
     /* Darksend Rounds */
     mapper->addMapping(ui->darksendRounds, OptionsModel::DarksendRounds);
-    mapper->addMapping(ui->anonymizeIntermodalcoin, OptionsModel::AnonymizeIntermodalCoinAmount);
+    mapper->addMapping(ui->anonymizeIntermodalCoin, OptionsModel::AnonymizeIntermodalCoinAmount);
 }
 
 void OptionsDialog::enableApplyButton()
