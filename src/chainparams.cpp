@@ -123,6 +123,7 @@ public:
 	vSeeds.push_back(CDNSSeedData("2",  "37.139.21.45"));
 	vSeeds.push_back(CDNSSeedData("3",  "46.101.56.208"));
 
+
 	convertSeeds(vFixedSeeds, pnSeed, ARRAYLEN(pnSeed), nDefaultPort);
 
         getHardcodedSeeds(vFixedSeeds);
@@ -153,7 +154,7 @@ static CMainParams mainParams;
 
 class CTestNetParams : public CMainParams {
 public:
-CTestNetParams() {
+    CTestNetParams() {
         // The message start string is designed to be unlikely to occur in normal data.
         // The characters are rarely used upper ASCII, not valid as UTF-8, and produce
         // a large 4-byte int at any alignment.
@@ -172,7 +173,10 @@ CTestNetParams() {
 
         hashGenesisBlock = genesis.GetHash();
 
-        //LogPrintf("Display genesis hash TESTNET so we can input it below %s\n", hashGenesisBlock.ToString().c_str());
+        //LogPrintf("Display genesis hash so we can input it below %s\n", hashGenesisBlock.ToString().c_str());
+	    //LogPrintf("Display merkle root so we can input it below %s\n", genesis.hashMerkleRoot.ToString().c_str());
+
+        //assert(genesis.hashMerkleRoot == uint256("0xc556e8828b26bdd1d9b09a7a51e19c554c015098f129d204020df9db58cb563c"));
         assert(hashGenesisBlock == uint256("dc176d67e7b2e7de3f36cd42f22824829fafe92dcc5a296830e8cf19ea6f326a"));
 
         vFixedSeeds.clear();
@@ -191,7 +195,6 @@ CTestNetParams() {
     }
     virtual Network NetworkID() const { return CChainParams::TESTNET; }
 };
-
 static CTestNetParams testNetParams;
 
 

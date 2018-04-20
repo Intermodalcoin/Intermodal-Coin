@@ -19,6 +19,12 @@ namespace Checkpoints
     typedef std::map<int, uint256> MapCheckpoints;
 
     //
+    // What makes a good checkpoint block?
+    // + Is surrounded by blocks with reasonable timestamps
+    //   (no blocks before with a timestamp after, none after with
+    //    timestamp before)
+    // + Contains no strange transactions
+    //
     static MapCheckpoints mapCheckpoints =
         boost::assign::map_list_of
         (0,	       Params().HashGenesisBlock() )
