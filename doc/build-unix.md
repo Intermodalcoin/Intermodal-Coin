@@ -251,7 +251,7 @@ Example of Configuration file
 
 	rpcuser=intermodalcoind
 	rpcpassword=vejktejklungwerklcgerkum
-	rpcport=46979
+	rpcport=11708
 	rpcallowip=127.0.0.1
 	listen=1
 	server=1

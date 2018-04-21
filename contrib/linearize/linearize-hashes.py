@@ -89,7 +89,7 @@ if __name__ == '__main__':
 	if 'host' not in settings:
 		settings['host'] = '127.0.0.1'
 	if 'port' not in settings:
-		settings['port'] = 46979
+		settings['port'] = 11708
 background-color: rgb(25, 25, 25);
 alternate-background-color: rgb(10, 10, 10);
 	if 'min_height' not in settings:
