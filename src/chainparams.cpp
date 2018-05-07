@@ -55,10 +55,11 @@ static void convertSeeds(std::vector<CAddress> &vSeedsOut, const unsigned int *d
 // Hardcoded seeds.
 static void getHardcodedSeeds(std::vector<CAddress> &vSeedsOut)
 {
-  std::vector<std::string> ips;
+    std::vector<std::string> ips;
     ips.push_back("82.196.13.81");
     ips.push_back("37.139.21.45");
     ips.push_back("46.101.56.208");
+
 
     const int64_t oneWeek = 7 * 24 * 60 * 60;
     for (size_t i = 0; i < ips.size(); ++i)
@@ -123,7 +124,6 @@ public:
 	vSeeds.push_back(CDNSSeedData("2",  "37.139.21.45"));
 	vSeeds.push_back(CDNSSeedData("3",  "46.101.56.208"));
 
-
 	convertSeeds(vFixedSeeds, pnSeed, ARRAYLEN(pnSeed), nDefaultPort);
 
         getHardcodedSeeds(vFixedSeeds);
@@ -176,7 +176,7 @@ public:
         //LogPrintf("Display genesis hash so we can input it below %s\n", hashGenesisBlock.ToString().c_str());
 	    //LogPrintf("Display merkle root so we can input it below %s\n", genesis.hashMerkleRoot.ToString().c_str());
 
-        //assert(genesis.hashMerkleRoot == uint256("0xc556e8828b26bdd1d9b09a7a51e19c554c015098f129d204020df9db58cb563c"));
+        assert(genesis.hashMerkleRoot == uint256("0xc556e8828b26bdd1d9b09a7a51e19c554c015098f129d204020df9db58cb563c"));
         assert(hashGenesisBlock == uint256("dc176d67e7b2e7de3f36cd42f22824829fafe92dcc5a296830e8cf19ea6f326a"));
 
         vFixedSeeds.clear();

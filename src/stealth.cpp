@@ -1,4 +1,4 @@
-// Copyright (c) 2014 The ShadowCoin developers
+// Copyright (c) 2014 The IntermodalCoin developers
 // Distributed under the MIT software license, see the accompanying
 // file license.txt or http://www.opensource.org/licenses/mit-license.php.
 
