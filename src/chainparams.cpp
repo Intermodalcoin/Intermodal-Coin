@@ -173,11 +173,11 @@ public:
 
         hashGenesisBlock = genesis.GetHash();
 
-        LogPrintf("Display testnet genesis hash so we can input it below %s\n", hashGenesisBlock.ToString().c_str());
-	    LogPrintf("Display testnet merkle root so we can input it below %s\n", genesis.hashMerkleRoot.ToString().c_str());
+        //LogPrintf("Display testnet genesis hash so we can input it below %s\n", hashGenesisBlock.ToString().c_str());
+	    //LogPrintf("Display testnet merkle root so we can input it below %s\n", genesis.hashMerkleRoot.ToString().c_str());
 
-        assert(hashGenesisBlock == uint256(""));
-        assert(genesis.hashMerkleRoot == uint256(""));
+        assert(hashGenesisBlock == uint256("dc176d67e7b2e7de3f36cd42f22824829fafe92dcc5a296830e8cf19ea6f326a"));
+        assert(genesis.hashMerkleRoot == uint256("431651c2231783ea262ad34ffab4841bc3912a739320d8832248edb810ffed54"));
 
         vFixedSeeds.clear();
         vSeeds.clear();
