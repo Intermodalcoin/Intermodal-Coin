@@ -2617,7 +2617,7 @@ bool MasternodePayments = false;
                     ExtractDestination(payee, address1);
                     CIntermodalCoinAddress address2(address1);
 					
-					if(nBestHeight >= 225000) {
+					if(nBestHeight >= 210000) {
 					
 						
                     CScript winner;
@@ -3649,7 +3649,7 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv)
         uint64_t nNonce = 1;
         vRecv >> pfrom->nVersion >> pfrom->nServices >> nTime >> addrMe;
 
-        if ((pfrom->nVersion < MIN_PEER_PROTO_VERSION) || (nBestHeight >= 225000 && pfrom->nVersion < MIN_PEER_PROTO_VERSION_FORK1))
+        if ((pfrom->nVersion < MIN_PEER_PROTO_VERSION) || (nBestHeight >= 210000 && pfrom->nVersion < MIN_PEER_PROTO_VERSION_FORK1))
         {
             // disconnect from peers older than this proto version
             LogPrintf("partner %s using obsolete version %i; disconnecting\n", pfrom->addr.ToString(), pfrom->nVersion);
