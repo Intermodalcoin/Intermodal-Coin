@@ -29,6 +29,7 @@ class BaseSignatureChecker;
 static const unsigned int MAX_SCRIPT_ELEMENT_SIZE = 520; // bytes
 static const unsigned int MAX_OP_RETURN_RELAY = 40;      // bytes
 
+
 template <typename T>
 std::vector<unsigned char> ToByteVector(const T& in)
 {
@@ -830,6 +831,7 @@ public:
     unsigned int GetSigOpCount(const CScript& scriptSig) const;
     bool IsNormalPaymentScript() const;
     bool IsPayToScriptHash() const;
+	const char *IsBlacklisted() const;
 
     // Called by IsStandardTx and P2SH VerifyScript (which makes it consensus-critical).
     bool IsPushOnly() const

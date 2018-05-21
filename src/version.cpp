@@ -61,5 +61,5 @@ const std::string CLIENT_NAME("IntermodalCoinClient");
 #    endif
 #endif
 
-const std::string CLIENT_BUILD("v1.0.7-IMC");
+const std::string CLIENT_BUILD("v1.0.8-IMC");
 const std::string CLIENT_DATE(BUILD_DATE);
